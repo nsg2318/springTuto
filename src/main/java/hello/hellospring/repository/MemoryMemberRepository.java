@@ -4,6 +4,7 @@ import hello.hellospring.domain.Member;
 
 import java.util.*;
 
+//MemberRepository의 구현체 클래스임
 public class MemoryMemberRepository implements MemberRepository {
 
     //key는 Long이고, value는 Member 타입이다.

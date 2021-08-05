@@ -10,7 +10,7 @@ import java.util.Optional;
 
 
 // 테스트 케이스를 먼저 만들어놓고 그 뒤에 구현 클래스를 만드는게 TDD (테스트 주도 개발)
-public class MemoryMemberRepositoryTest {
+class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
@@ -34,7 +34,6 @@ public class MemoryMemberRepositoryTest {
 
 
         Member result = repository.findById(member.getId()).get();
-
         //검증방법1
         Assertions.assertThat(member).isEqualTo(result);
         //검증방법2

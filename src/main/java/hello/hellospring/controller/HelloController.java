@@ -33,7 +33,7 @@ public class HelloController {
     public String helloString(@RequestParam("alpha2") String name){
         return "hello " + name;
     }
-
+                                //localhost:8080/hello-string?alpha2=아무거나
     //API2 - 진짜
     @GetMapping("hello-api")
     @ResponseBody
