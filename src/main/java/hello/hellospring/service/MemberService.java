@@ -3,14 +3,19 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 // 비즈니스 로직 구현 서비스는 비즈니스에 의존적으로 네이밍하고 리포지터리쪽은 약간 더 백단으로 네이밍을 함
-public class MemberService {
-    //일단 서비스를 만드려면 리포지토리가 있어야겠죠?
+//일단 서비스를 만드려면 리포지토리가 있어야겠죠?
 
+
+public class MemberService {
     private final MemberRepository memberRepository;
+
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
@@ -33,6 +38,8 @@ public class MemberService {
         result.ifPresent(member1 -> {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         });
+
+
     }
 
 //        사실 Optional<Member> result ... 이렇게 하는거 자체가 지저분? 하다 라고 함
