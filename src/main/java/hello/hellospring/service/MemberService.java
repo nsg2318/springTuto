@@ -12,11 +12,11 @@ import java.util.Optional;
 // 비즈니스 로직 구현 서비스는 비즈니스에 의존적으로 네이밍하고 리포지터리쪽은 약간 더 백단으로 네이밍을 함
 //일단 서비스를 만드려면 리포지토리가 있어야겠죠?
 
-
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
