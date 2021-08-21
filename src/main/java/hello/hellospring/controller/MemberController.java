@@ -20,7 +20,6 @@ public class MemberController {
     private final MemberService memberService;
 
     //Autowired는 스프링컨테이너에있는 멤버서비스를 갖다가 연결시켜준다.
-    @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
